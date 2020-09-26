@@ -1,0 +1,150 @@
+/*-------------------------------------
+    Author: Amy DiFranco
+    one_page-website
+---------------------------------------
+    Generic Styles
+--------------------------------------*/
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+/*-------------------------------------
+    Form Styles
+---------------------------------------*/
+
+.information input[type="text"] {
+    width: 40%;
+    margin: 10px 1em;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid deeppink;
+    border-left: 2px solid deeppink;
+    border-radius: 5px;
+}
+
+.row > .column {
+    padding: 0.8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* create four euqal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* the modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: pink;
+}
+
+/* modal content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1400px;
+}
+
+/* close button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*hide the slides by default*/
+.mySlides {
+    display: none;
+}
+
+/* next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #db7093;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/*position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* on hover, add a black background color with a little bit of see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* number text (1/5 etc) */
+.numbertext {
+    color: #db7093;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* caption text */
+.caption-container {
+    text-align: center;
+    background-color: pink;
+    padding: 2px 16px;
+    color: #db7093;
+}
+
+img.cupcakes {
+    opacity: 0.6;
+}
+
+.active,
+.cupcakes:hover {
+    opacity: 1;
+}
+
+img.hoverr-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

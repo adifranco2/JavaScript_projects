@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="./JS/one_page_website.js" defer></script>
+		<link rel="stylesheet" href="one_page_website.css">
+		<title>D-Cups Cupcakes</title>
+	</head>
+	<body>
+	
+		<!--NAV-->
+		<div>
+			<div>
+				<ul>
+					<a href="#home" id="link"><li>Home</li></a>
+					<a href="#gallery" id="link"><li>Gallery</li></a>
+					<a href="#video" id="link"><li>Video</li></a>
+					<a href="#contact" id="link"><li>Contact Us</li></a>
+				</ul>
+			</div>
+		</div>
+		<!--END NAV-->
+		
+		<!--HOME-->
+		<div id="home">
+			<div>
+				<div>
+					<h1>D-Cups Cupcakes</h1>
+					
+					<p>D-Cups Cupcakes puts BIG flavor in the palm of your hand!<br>
+					We specialize in custom-made themed cupcakes that will stand out at any event.<br>
+					Contact us below to get your hands on some D-Cups Cupcakes.</p>
+				</div>
+			</div>
+		</div>
+		<!--END HOME-->
+		
+		<!--GALLERY-->
+		<section>
+			<div id="gallery">
+				<h1>Gallery</h1>
+				<div>
+				
+					<!--PHOTO-CONTAINER 1-->
+					<div class="row">
+						<div class="column">
+							<img src="./images/thumbnail_1.jpg" onclick="openModal();currentSlide(1)"
+								class="hover-shadow">
+						</div>
+					</div>
+					<!--END PHOTO-CONTAINER 1-->
+					
+					<!--PHOTO-CONTAINER 2-->
+					<div class="row">
+						<div class="column">
+							<img src="./images/thumbnail_2.jpg" onclick="openModal();currentSlide(2)" 
+								class="hover-shadow">
+						</div>
+					</div>
+					<!--END PHOTO-CONTAINER 2-->
+					
+					<!--PHOTO-CONTAINER 3-->
+					<div class="row">
+						<div class="column">
+							<img src="./images/thumbnail_3.jpg" onclick="openModal();currentSlide(3)"
+								class="hover-shadow">
+						</div>
+					</div>
+					<!--END PHOTO-CONTAINER 3-->
+					
+					<!--PHOTO-CONTAINER 4-->
+					<div class="row">
+						<div class="column">
+							<img src="./images/thumbnail_4.jpg" onclick="openModal();currentSlide(4)"
+								class="hover-shadow">
+						</div>
+					</div>
+					<!--END PHOTO-CONTAINER 4-->
+					
+					<!--PHOTO-CONTAINER 5-->
+					<div class="row">
+						<div class="column">
+							<img src="./images/thumbnail_5.jpg" onclick="openModal();currentSlide(5)"
+								class="hover-shadow">
+						</div>
+					</div>
+					<!--END PHOTO-CONTAINER 5-->
+				</div>
+
+				<!--the modal/lightbox-->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+
+						<div class="mySlides">
+							<div class="numbertext">1 / 5</div>
+							<img src="./images/thumbnail_1.jpg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">2 / 5</div>
+							<img src="./images/thumbnail_2.jpg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">3 / 5</div>
+							<img src="./images/thumbnail_3.jpg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">4 / 5</div>
+							<img src="./images/thumbnail_4.jpg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">5 / 5</div>
+							<img src="./images/thumbnail_5.jpg" style="width:100%">
+						</div>
+
+						<!--next/previous controls-->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						<!--caption text-->
+						<div class="caption-container">
+							<p id="caption"></p>
+						</div>
+
+						<!--thumbnail image controls-->
+						<div class="column">
+							<img class="cupcakes" src="./images/thumbnail_1.jpg" onclick="currentSlide(1)" 
+								alt="Cupcakes with pink glaze">
+						</div>
+						
+						<div class="column">
+							<img class="cupcakes" src="./images/thumbnail_2.jpg" onclick="currentSlide(2)" 
+								alt="A box of cupcakes">
+						</div>
+					
+						<div class="column">
+							<img class="cupcakes" src="./images/thumbnail_3.jpg" onclick="currentSlide(3)"
+								alt="Cupcakes">
+						</div>
+						
+						<div class="column">
+							<img class="cupcakes" src="./images/thumbnail_4.jpg" onclick="currentSlide(4)"
+								alt="Chocolate cupcakes">
+						</div>
+						
+						<div class="column">
+							<img class="cupcakes" src="./images/thumbnail_5.jpg" onclick="currentSlide(5)"
+								alt="Cupcakes decorated as jungle animals">
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>	
+		
+		<!--Video Content-->
+		<section>
+			<div id="video">
+				<h1>Video Content</h1>
+				<div>
+					
+					<!--VIDEO-CONTAINER 1-->
+					<div>
+						<div>
+							<iframe src="https://youtube.com/embed/DzIaMDNK618" title="Eating cupcakes"></iframe>
+						</div>
+					</div>
+					<!--END VIDEO-CONTAINER 1-->
+				</div>
+			</div>
+		</section>
+		<!--End Video Content-->
+		
+		<!--Contact Us-->
+		<section>
+			<div id="contact">
+				<div>
+					<h1>Contact us for more information.</h1>
+					<div>
+						
+						<p>
+							Please provide us with your contact and event information.
+						</p>
+						<div class="information">
+							<form action="" method="post">
+								<input class="info" type="text" value="First Name">
+								<input class="info" type="text" value="Last Name">
+								<input class="info" type="text" value="Email Address">
+								<input class="info" type="text" value="Phone Number">
+								<input class="info" type="text" value="Event Type">
+								<div class="form-spacer">
+								</div>
+								<div>
+									<input type="submit" value="Submit">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--END Contact Us-->
+		
+		<!--FOOTER-->
+		<div>
+			This is not a real bakery.  Cupcakes were eaten during the creation of this content.
+		</div>
+		<!--END FOOTER-->
+	
+	</body>
+</html>
