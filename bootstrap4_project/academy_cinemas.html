@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <title>Academy Cinemas</title>
   </head>
@@ -39,21 +42,16 @@
 
           <!--Toast-->
         <div class="container">
-          <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
-            <div class="toast" style="position: absolute; top: 0; right: 0;">
-              <div class="toast-header">
-              <strong class="mr-auto text-primary">Academy Cinemas</strong>
-              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+            <div class="toast" data-autohide="false" id="myToast" style="position: absolute;">
+            <div class="toast-header">
+                <strong class="mr-auto"><i class="fa fa-grav"></i> Academy Cinemas</strong>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
             </div>
             <div class="toast-body">
-              Don't forget to check out our great movie deals!
+                Make sure you check out our great movie deals!
             </div>
-          </div>
         </div>
         
-         
-
           <div class="jumbotron jumbotron-fluid bg-info text-center">
             <div class="container" id="about">
               <h1 class="display-4 text-light">Academy Cinemas</h1>
@@ -241,15 +239,22 @@
 
    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    
      <!-- Optional JavaScript -->
      <script>
-      $(document).ready(function(){
-        $('.toast').toast('show');
-      });
+     $(document).ready(function(){
+      $("#myToast").toast('show');
+      $("#myToast").toast({
+            autohide: false     // so the toast doesn't disappear after half a second
+        });
+    $('#hideBtn').click(function() {
+           $('#myToast').toast('hide'); // allows user to hide the toast on button click
+        });
+    $('#showBtn').click(function(){
+           $("#myToast").toast('show'); // allows user to show the toast on button click
+        });        
+});
     </script> 
      
      <script>
