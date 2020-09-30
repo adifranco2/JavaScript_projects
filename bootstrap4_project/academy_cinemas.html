@@ -41,15 +41,16 @@
           </nav> 
 
           <!--Toast-->
-        <div class="container">
+          <div class="container"> 
             <div class="toast" data-autohide="false" id="myToast" style="position: absolute;">
-            <div class="toast-header">
-                <strong class="mr-auto"><i class="fa fa-grav"></i> Academy Cinemas</strong>
-                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
-            </div>
-            <div class="toast-body">
-                Make sure you check out our great movie deals!
-            </div>
+              <div class="toast-header">
+                  <strong class="mr-auto"><i class="fa fa-grav"></i> Academy Cinemas</strong>
+                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+              </div>
+              <div class="toast-body">
+                  Make sure you check out our great movie deals!
+              </div>
+          </div>
         </div>
         
           <div class="jumbotron jumbotron-fluid bg-info text-center">
@@ -234,9 +235,8 @@
                 </li>
             </ul>
           </div>
+    
     </div>
-
-
    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
@@ -254,7 +254,7 @@
     $('#showBtn').click(function(){
            $("#myToast").toast('show'); // allows user to show the toast on button click
         });        
-});
+    });
     </script> 
      
      <script>
