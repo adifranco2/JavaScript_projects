@@ -1,0 +1,410 @@
+/*affects entire document*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+    margin: 0%;
+        opacity: 1;
+        transition:3s opacity;
+    letter-spacing: .2vw;
+    font-family: Tahoma, Geneva;
+    font-size: 1vw;
+}
+
+/* fade effect for page load*/
+body.fade-out {
+    opacity: .1;
+    transition: none;
+}
+
+/* Navbar */
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+        position:fixed;
+    -webkit-animation: moveNav 5s;
+        animation: moveNav 5s;
+}
+
+/* Navbar text */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    padding: .75vw 1vw;
+    text-decoration: none;
+    font-family: Tahoma, Geneva;
+    font-size: 1vw;
+    text-align: center;
+        position: relative;
+    -webkit-animation: movenavText 5.75s;
+        animation: movenavText 5.75s;
+    letter-spacing: .2vw;
+}
+
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+@keyframes movenavText {
+    from {top: -100vw;}
+    to {top:0vw;}
+}
+
+@keyframes movevideoText {
+    from {top: -100vw;}
+    to {top: 0px;}
+}
+
+.navbar a:hover {
+    background-color: #f4f4f4;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+}
+
+.navbar a.active {
+    background-color: darkgray;
+}
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1.5,1.5);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+#Typing_Video {
+    filter: grayscale(50%);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    top: 0;
+    z-index: -1;
+    animation: zoominoutsinglefeatured 5s;
+}
+
+.video_text {
+    background: rgba(0,0,0,0.5);
+    color: honeydew;/*white;*/
+    width: 100%;
+    padding-top: .1vh;
+    padding-bottom: 1vh;
+    margin-top: 23%;
+        position: relative;
+    -webkit-animation: moveNav 4s;
+        animation: movevideoText 4s;
+}
+
+/*Slideshow style*/
+#Slideshow_Background {
+    background: rgba(255,255,255,0.35);
+}
+
+.mySlides {
+    display: none;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/*slideshow container*/
+#Slideshow_Container {
+    width: 39.5vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+/*slideshow images*/
+.Slide_Show_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0,0,0,.75);
+    width: auto;
+}
+
+/*next & previous buttons */
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    margin-top: -0vw;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 1vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.Previous:hover, .Next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: honeydew;
+}
+
+/*slideshow text*/
+.text {
+    color: honeydew;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: .1vw;
+    font-size: 1vw;
+    background-color: rgba(0,0,0,0.75);
+    font-weight: bold;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.Slide_Number {
+    color: honeydew;
+    position: absolute;
+    top: 0;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: .1vw;
+    font-size: 1vw;
+    font-weight: bold;
+    display: none;
+}
+
+/*the dots under the slideshow*/
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: honeydew;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/*hover effect for slideshow dots*/
+.active, .dot:hover {
+    background-color: black;
+}
+
+/*fading animation for slideshow*/
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+    
+/* styling of columns*/
+* {
+    box-sizing: border-box;
+}
+
+.column_1 {
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    height: 400px;
+    background-color: honeydew;
+}
+
+.column_2 {
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    height: 400px;
+    background-color: dimgrey;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: Tahoma, Geneva;
+    text-align: center;
+    margin-top: 3%;
+    color: #1a1a1a;
+}
+
+p {
+    font-family: Tahoma, Geneva;
+    text-align: justify;
+    letter-spacing: .1vw;
+    font-size: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+center {
+    font-family: Tahoma, Geneva;
+    text-align: center;
+    letter-spacing: .1vw;
+    font-size: 1vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+a {
+    color: blue;
+}
+
+q {
+    font-style: italic;
+    font-weight: bold;
+}
+
+img {
+    filter: grayscale(75%);
+    border-radius: 8px;
+    max-width: 100%;
+    height: 100%;
+        margin: auto auto auto auto;
+    display: block;
+}
+
+center:hover {
+    transition: transform 2s;
+    transform: scale(1.1);
+}
+
+p:hover {
+    color:#00004d;
+        transition: transform 1s;
+    transform: scale(1.01);
+}
+
+h1:hover {
+    color: black;
+    font-weight: normal;
+}
+
+img:hover {
+    filter: grayscale(5%);
+        transition: transform 1s;
+    transform: scale(1.1);
+}
+
+/*contact form styling*/
+@keyframes movePopup {
+    from {right: -40vw;}
+    to {bottom: 1.75vw;}
+}
+
+.Pop_Up_Button {
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: honeydew;
+    color: black;
+    border: solid;
+    cursor: pointer;
+    position: fixed;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+}
+
+.form-popup {
+    border: 3px solid #f0f1f0;
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+}
+
+.form-container {
+    max-width: 49vw;
+    padding: 9px;
+    background-color: gainsboro;
+}
+
+.form-container input[type=text], .form-container input[type=pasword] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background: whitesmoke;
+    font-family: Tahoma, Geneva;
+    font-size: 1vw;
+}
+
+.form-container .btn {
+    background-color: whitesmoke;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+}
+
+.form-container .cancel {
+    background-color: darkgray;
+    color: black;
+    border-color: gray;
+}
+
+button {
+    font-family: Tahoma, Geneva;
+    letter-spacing: .3vw;
+    font-size: 1vw;
+    font-weight: bold;
+    padding: 1.5vw 1.5vw;
+    border-style: solid;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+button:hover, .form-container .btn:hover {
+    color: honeydew;
+    background-color: black;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: silver;
+}
+
+.form-container .cancel:hover {
+    color: honeydew;
+    background-color: darkred;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: black;
+}
+
+footer {
+    padding: 1%;
+    background-color: whitesmoke;
+}
